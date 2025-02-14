@@ -5,6 +5,7 @@ import backgroundImage from "./assets/business.jpg"; // Import local image
 import { TablePagination,IconButton,Container, Card, CardContent, Typography, Button, TextField, Grid, AppBar, Toolbar, Paper, Table, TableHead, TableRow, TableCell, TableBody, TableContainer, TableSortLabel, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import adminImage from "./assets/admin.webp"
+import Home from "./components/Homepage";
 
 const backgroundStyle = {
   backgroundImage: `url(${backgroundImage})`,
@@ -34,7 +35,7 @@ const backgroundStyleAdmin = {
 
 
 
-function Home() {
+function Home1() {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -299,6 +300,7 @@ function Admin() {
 }
 export default function App() {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
