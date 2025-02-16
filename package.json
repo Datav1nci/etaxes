@@ -15,7 +15,7 @@
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1"
   },
-  "homepage": "https://Datav1nci.github.io/etaxes/",
+  "homepage": "https://Datav1nci.github.io",
   "scripts": {
     "predeploy":"npm run build",
     "start": "react-scripts start",
