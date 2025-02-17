@@ -184,7 +184,7 @@ function ResponsiveAppBar() {
           <Typography variant="h6" gutterBottom>Contact Information</Typography>
           <Typography variant="body1">📍 Team, Effitaxes 6955 Boulv. Taschereau, Brossard #004, Québec, J4Z 1A7</Typography>
           <Typography variant="body1">📞 Phone: +1 (450) 259-1829</Typography>
-          <Typography variant="body1">📧 Email: datavvinci@gmail.com</Typography>
+          <Typography variant="body1">📧 Email: youssef@effitaxes.com</Typography>
         </Box>
       </Popover>
 
