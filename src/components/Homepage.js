@@ -92,14 +92,14 @@ export default function Home() {
         <Container maxWidth="lg" style={{ marginTop: "40px" }}>
             {/* New Services Section */}
 <Container maxWidth="lg" style={{ marginTop: "40px" }}>
-<Card >
+/*<Card >
   <Typography variant="h4" gutterBottom style={{ textAlign: "center", color: "#002147" }}>
     Our Services
   </Typography>
   </Card>
   <Grid container spacing={4} justifyContent="center" style={{marginTop:"10px"}}>
     {/* Service 1 */}
-    <Grid item xs={12} sm={4}>
+/*    <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
         <img src={LogoJPEG} alt="Service 1" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
@@ -112,7 +112,7 @@ export default function Home() {
     </Grid>
 
     {/* Service 2 */}
-    <Grid item xs={12} sm={4}>
+/*    <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
         <img src={LogoJPEG} alt="Service 2" style={{ width: "190px", height: "19px", objectFit: "cover" }}/>
         <CardContent>
@@ -125,7 +125,7 @@ export default function Home() {
     </Grid>
 
     {/* Service 3 */}
-    <Grid item xs={12} sm={4}>
+/*    <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
         <img src={LogoJPEG}  alt="Service 3" style={{ width: "190px", height: "19px", objectFit: "cover" }}/>
         <CardContent>
@@ -138,7 +138,7 @@ export default function Home() {
     </Grid>
 
     {/* Service 4 */}
-    <Grid item xs={12} sm={4}>
+/*    <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
         <img src={LogoJPEG}  alt="Service 4" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
@@ -151,7 +151,7 @@ export default function Home() {
     </Grid>
 
     {/* Service 5 */}
-    <Grid item xs={12} sm={4}>
+/*    <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
         <img src={LogoJPEG}  alt="Service 5" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
@@ -164,7 +164,7 @@ export default function Home() {
     </Grid>
 
     {/* Service 6 */}
-    <Grid item xs={12} sm={4}>
+/*    <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
         <img src={LogoJPEG}  alt="Service 6" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
@@ -174,6 +174,7 @@ export default function Home() {
           </Typography>
         </CardContent>
       </Card>
+	  */
     </Grid>
   </Grid>
 </Container>
