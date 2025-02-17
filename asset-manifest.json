@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/etaxes/static/css/main.e6c13ad2.css",
-    "main.js": "/etaxes/static/js/main.4c2ec4a0.js",
+    "main.js": "/etaxes/static/js/main.ef4b2c41.js",
     "static/media/admin.webp": "/etaxes/static/media/admin.2bef18408b993ea68f13.webp",
     "static/media/business.jpg": "/etaxes/static/media/business.0a000a7d1ac4ca5a23b8.jpg",
     "static/media/Logo.jpg": "/etaxes/static/media/Logo.6401f7617d82897d712a.jpg",
     "index.html": "/etaxes/index.html",
     "main.e6c13ad2.css.map": "/etaxes/static/css/main.e6c13ad2.css.map",
-    "main.4c2ec4a0.js.map": "/etaxes/static/js/main.4c2ec4a0.js.map"
+    "main.ef4b2c41.js.map": "/etaxes/static/js/main.ef4b2c41.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.4c2ec4a0.js"
+    "static/js/main.ef4b2c41.js"
   ]
 }
