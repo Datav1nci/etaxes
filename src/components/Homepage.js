@@ -101,7 +101,7 @@ export default function Home() {
     {/* Service 1 */}
     <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
-        <img src={LogoJPEG} alt="Service 1" style={{ width: "200px", height: "20px", objectFit: "cover" }} />
+        <img src={LogoJPEG} alt="Service 1" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
           <Typography variant="h6" gutterBottom>Consultation</Typography>
           <Typography variant="body2" color="textSecondary">
@@ -114,7 +114,7 @@ export default function Home() {
     {/* Service 2 */}
     <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
-        <img src={LogoJPEG} alt="Service 2" style={{ width: "200px", height: "20px", objectFit: "cover" }}/>
+        <img src={LogoJPEG} alt="Service 2" style={{ width: "190px", height: "19px", objectFit: "cover" }}/>
         <CardContent>
           <Typography variant="h6" gutterBottom>Tax Advisory</Typography>
           <Typography variant="body2" color="textSecondary">
@@ -127,7 +127,7 @@ export default function Home() {
     {/* Service 3 */}
     <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
-        <img src={LogoJPEG}  alt="Service 3" style={{ width: "200px", height: "20px", objectFit: "cover" }}/>
+        <img src={LogoJPEG}  alt="Service 3" style={{ width: "190px", height: "19px", objectFit: "cover" }}/>
         <CardContent>
           <Typography variant="h6" gutterBottom>Financial Planning</Typography>
           <Typography variant="body2" color="textSecondary">
@@ -140,7 +140,7 @@ export default function Home() {
     {/* Service 4 */}
     <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
-        <img src={LogoJPEG}  alt="Service 4" style={{ width: "200px", height: "20px", objectFit: "cover" }} />
+        <img src={LogoJPEG}  alt="Service 4" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
           <Typography variant="h6" gutterBottom>Business Registration</Typography>
           <Typography variant="body2" color="textSecondary">
@@ -153,7 +153,7 @@ export default function Home() {
     {/* Service 5 */}
     <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
-        <img src={LogoJPEG}  alt="Service 5" style={{ width: "200px", height: "20px", objectFit: "cover" }} />
+        <img src={LogoJPEG}  alt="Service 5" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
           <Typography variant="h6" gutterBottom>Investment Advisory</Typography>
           <Typography variant="body2" color="textSecondary">
@@ -166,7 +166,7 @@ export default function Home() {
     {/* Service 6 */}
     <Grid item xs={12} sm={4}>
       <Card sx={{ maxWidth: 345, boxShadow: 5 }}>
-        <img src={LogoJPEG}  alt="Service 6" style={{ width: "200px", height: "20px", objectFit: "cover" }} />
+        <img src={LogoJPEG}  alt="Service 6" style={{ width: "190px", height: "19px", objectFit: "cover" }} />
         <CardContent>
           <Typography variant="h6" gutterBottom>Retirement Planning</Typography>
           <Typography variant="body2" color="textSecondary">
