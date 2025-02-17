@@ -301,11 +301,11 @@ function Admin() {
 export default function App() {
   return (
     
-    <Router>
+    // <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
-    </Router>
+    // </Router>
   );
 }
