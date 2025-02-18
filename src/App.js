@@ -50,10 +50,10 @@ function Home1() {
 
   const fetchSlots = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/appointments");
+      const response = await axios.get("https://etaxes-bk-end.onrender.com/appointments");
       const booked = new Set(response.data.map(appt => `${appt.date}-${appt.time}`));
       setBookedSlots(booked);
-      const blockedResponse = await axios.get("http://localhost:5000/blockedSlots");
+      const blockedResponse = await axios.get("https://etaxes-bk-end.onrender.com/blockedSlots");
       const blocked = new Set(blockedResponse.data.map(slot => `${slot.date}-${slot.time}`));
       setBlockedSlots(blocked);
     } catch (error) {
@@ -71,7 +71,7 @@ function Home1() {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/appointments", {
+      await axios.post("https://etaxes-bk-end.onrender.com/appointments", {
         name,
         date,
         time,
@@ -158,7 +158,7 @@ function Admin() {
 
   const fetchBlockedSlots = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/blockedSlots");
+      const response = await axios.get("https://etaxes-bk-end.onrender.com/blockedSlots");
       setBlockedSlots(response.data);
     } catch (error) {
       console.error("Error fetching blocked slots:", error);
@@ -167,7 +167,7 @@ function Admin() {
 
   const fetchAppointments = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/appointments");
+      const response = await axios.get("https://etaxes-bk-end.onrender.com/appointments");
       setAppointments(response.data);
     } catch (error) {
       console.error("Error fetching appointments:", error);
@@ -177,7 +177,7 @@ function Admin() {
   const blockSlot = async () => {
     if (!date || !time) return;
     try {
-      await axios.post("http://localhost:5000/blockedSlots", { date, time });
+      await axios.post("https://etaxes-bk-end.onrender.com/blockedSlots", { date, time });
       fetchBlockedSlots();
     } catch (error) {
       console.error("Error blocking slot:", error);
@@ -186,7 +186,7 @@ function Admin() {
 
   const unblockSlot = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/blockedSlots/${id}`);
+      await axios.delete(`https://etaxes-bk-end.onrender.com/blockedSlots/${id}`);
       fetchBlockedSlots();
     } catch (error) {
       console.error("Error unblocking slot:", error);
@@ -195,7 +195,7 @@ function Admin() {
 
   const deleteAppointment = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/appointments/${id}`);
+      await axios.delete(`https://etaxes-bk-end.onrender.com/appointments/${id}`);
       fetchAppointments();
     } catch (error) {
       console.error("Error deleting appointment:", error);
