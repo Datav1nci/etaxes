@@ -18,6 +18,7 @@ const backgroundStyle = {
   alignItems: "center",
   textAlign: "center",
   padding: "20px"
+  
 };
 
 
@@ -36,10 +37,10 @@ export default function Home() {
   
     const fetchSlots = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/appointments");
+        const response = await axios.get("https://etaxes-bk-end.onrender.com/appointments");
         const booked = new Set(response.data.map(appt => `${appt.date}-${appt.time}`));
         setBookedSlots(booked);
-        const blockedResponse = await axios.get("http://localhost:5000/blockedSlots");
+        const blockedResponse = await axios.get("https://etaxes-bk-end.onrender.com/blockedSlots");
         const blocked = new Set(blockedResponse.data.map(slot => `${slot.date}-${slot.time}`));
         setBlockedSlots(blocked);
       } catch (error) {
@@ -57,7 +58,7 @@ export default function Home() {
         return;
       }
       try {
-        await axios.post("http://localhost:5000/appointments", {
+        await axios.post("https://etaxes-bk-end.onrender.com/appointments", {
           name,
           date,
           time,
