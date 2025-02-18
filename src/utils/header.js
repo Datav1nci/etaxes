@@ -42,117 +42,86 @@ function ResponsiveAppBar() {
   const [anchorElForms, setAnchorElForms] = React.useState(null);
 
   // Handle Nav Menu
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
+  const handleCloseNavMenu = () => setAnchorElNav(null);
 
   // Handle User Menu
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const handleOpenUserMenu = (event) => setAnchorElUser(event.currentTarget);
+  const handleCloseUserMenu = () => setAnchorElUser(null);
 
   // Handle Contact Popover
-  const handleOpenContact = (event) => {
-    setAnchorElContact(event.currentTarget);
-  };
-  const handleCloseContact = () => {
-    setAnchorElContact(null);
-  };
+  const handleOpenContact = (event) => setAnchorElContact(event.currentTarget);
+  const handleCloseContact = () => setAnchorElContact(null);
 
   // Handle Forms Menu
-  const handleOpenFormsMenu = (event) => {
-    setAnchorElForms(event.currentTarget);
-  };
-  const handleCloseFormsMenu = () => {
-    setAnchorElForms(null);
-  };
+  const handleOpenFormsMenu = (event) => setAnchorElForms(event.currentTarget);
+  const handleCloseFormsMenu = () => setAnchorElForms(null);
 
   return (
-    <AppBar position="static" style={{backgroundColor:"aliceblue"}}>
+    <AppBar position="static" style={{ backgroundColor: "aliceblue" }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ flexWrap: 'wrap' }}>
           {/* Logo */}
-          <img src={LogoJPEG} alt="Logo" width={400} height={40} />
+          <img src={LogoJPEG} alt="Logo" width={250} height={40} />
 
           {/* Navigation Menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 2 }}>
-            {/* {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-                {page}
-              </Button>
-            ))} */}
-          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 2 }}></Box>
 
           {/* Forms & Resources Dropdown */}
-          <Button
-            color="inherit"
-            sx={{ mx: 2, border: "1px solid black", color:"black" }}
-            onClick={handleOpenFormsMenu}
-          >
-            Forms & Resources
-          </Button>
-          <Menu
-            anchorEl={anchorElForms}
-            open={Boolean(anchorElForms)}
-            onClose={handleCloseFormsMenu}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'center',
-            }}
-          >
-            {Object.entries(formLinks).map(([category, links]) => (
-              <div key={category}>
-                <Typography sx={{ px: 2, py: 1, fontWeight: "bold" }}>{category}</Typography>
-                {links.map((link) => (
-                  <MenuItem key={link.name} onClick={handleCloseFormsMenu}>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      {link.name}
-                    </a>
-                  </MenuItem>
-                ))}
-              </div>
-            ))}
-          </Menu>
+          <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            <Button
+              color="inherit"
+              sx={{ mx: 1, border: "1px solid black", color: "black", fontSize: { xs: "12px", sm: "14px" } }}
+              onClick={handleOpenFormsMenu}
+            >
+              Forms & Resources
+            </Button>
+            <Menu
+              anchorEl={anchorElForms}
+              open={Boolean(anchorElForms)}
+              onClose={handleCloseFormsMenu}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+              transformOrigin={{ vertical: 'top', horizontal: 'center' }}
+              sx={{ maxWidth: '90vw', overflow: 'auto' }}
+            >
+              {Object.entries(formLinks).map(([category, links]) => (
+                <div key={category}>
+                  <Typography sx={{ px: 2, py: 1, fontWeight: "bold" }}>{category}</Typography>
+                  {links.map((link) => (
+                    <MenuItem key={link.name} onClick={handleCloseFormsMenu}>
+                      <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        {link.name}
+                      </a>
+                    </MenuItem>
+                  ))}
+                </div>
+              ))}
+            </Menu>
 
-          {/* Contact Us Button */}
-          <Button 
-            color="inherit" 
-            sx={{ mx: 2, border: "1px solid black", color:"black" }} 
-            onClick={handleOpenContact}
-          >
-            Contact Us
-          </Button>
+            {/* Contact Us Button */}
+            <Button
+              color="inherit"
+              sx={{ mx: 1, border: "1px solid black", color: "black", fontSize: { xs: "12px", sm: "14px" } }}
+              onClick={handleOpenContact}
+            >
+              Contact Us
+            </Button>
+          </Box>
 
           {/* User Profile Icon */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="User" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
@@ -171,14 +140,9 @@ function ResponsiveAppBar() {
         open={Boolean(anchorElContact)}
         anchorEl={anchorElContact}
         onClose={handleCloseContact}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'center' }}
+        sx={{ maxWidth: '90vw', overflow: 'auto' }}
       >
         <Box sx={{ p: 2, minWidth: 250, textAlign: "center" }}>
           <Typography variant="h6" gutterBottom>Contact Information</Typography>
