@@ -19,19 +19,17 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 // Links for Forms & Resources
 const formLinks = {
-  "French Forms": [
-    { name: "Particulier (VF)", url: "https://forms.office.com/r/jZA8KLUgQE" },
+  "Formulaires": [
+    { name: "Particulier", url: "https://forms.office.com/r/jZA8KLUgQE" },
+    { name: "Télétravail", url: "https://forms.office.com/r/9UZKxqL6QD" }, 
+    { name: "Travailleur autonome", url: "https://forms.office.com/r/aJyVzUTWKn" },
     { name: "Dépenses Voitures", url: "https://forms.office.com/r/5E4QCZh6Q5" },
-    { name: "Entreprise Travailleur (VF)", url: "https://forms.office.com/r/aJyVzUTWKn" },
-    { name: "Self-Employed (VF)", url: "https://forms.office.com/r/aJyVzUTWKn" },
-    { name: "Télétravail (VF)", url: "https://forms.office.com/r/9UZKxqL6QD" },
   ],
   "English Forms": [
-    { name: "Particulier (EN)", url: "https://forms.office.com/r/4LZZ97Fm3J" },
+    { name: "Individual", url: "https://forms.office.com/r/4LZZ97Fm3J" },
+    { name: "Remote work", url: "https://forms.office.com/r/9UZKxqL6QD" },
+    { name: "Self-Employed", url: "https://forms.office.com/r/wjAm3PiDkS" },
     { name: "Car Expenses", url: "https://forms.office.com/r/5E4QCZh6Q5" },
-    { name: "Entreprise Travailleur (EN)", url: "https://forms.office.com/r/wjAm3PiDkS" },
-    { name: "Self-Employed (EN)", url: "https://forms.office.com/r/wjAm3PiDkS" },
-    { name: "Télétravail (EN)", url: "https://forms.office.com/r/9UZKxqL6QD" },
   ]
 };
 
@@ -61,17 +59,35 @@ function ResponsiveAppBar() {
     <AppBar position="static" style={{ backgroundColor: "aliceblue" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ flexWrap: 'wrap' }}>
-          {/* Logo */}
-          <img src={LogoJPEG} alt="Logo" width={400} height={40} />
+          {/* Logo: Make it responsive by setting only the height */}
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              mr: 2,
+            }}
+          >
+            <img
+              src={LogoJPEG}
+              alt="Logo"
+              style={{ height: '40px', width: 'auto' }} 
+            />
+          </Box>
 
-          {/* Navigation Menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 2 }}></Box>
+          {/* Expandable space so items push to the right */}
+          <Box sx={{ flexGrow: 1 }} />
 
           {/* Forms & Resources Dropdown */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
             <Button
               color="inherit"
-              sx={{ mx: 1, border: "1px solid black", color: "black", fontSize: { xs: "12px", sm: "14px" } }}
+              sx={{
+                mx: 1,
+                border: "1px solid black",
+                color: "black",
+                fontSize: { xs: "12px", sm: "14px" },
+                whiteSpace: 'nowrap'
+              }}
               onClick={handleOpenFormsMenu}
             >
               Formulaires
@@ -82,26 +98,39 @@ function ResponsiveAppBar() {
               onClose={handleCloseFormsMenu}
               anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
               transformOrigin={{ vertical: 'top', horizontal: 'center' }}
-              sx={{ maxWidth: '90vw', overflow: 'auto' }}
+              sx={{ maxWidth: '90vw' }}
             >
               {Object.entries(formLinks).map(([category, links]) => (
-                <div key={category}>
-                  <Typography sx={{ px: 2, py: 1, fontWeight: "bold" }}>{category}</Typography>
+                <Box key={category} sx={{ px: 2, py: 1 }}>
+                  <Typography sx={{ fontWeight: "bold", mb: 1 }}>
+                    {category}
+                  </Typography>
                   {links.map((link) => (
                     <MenuItem key={link.name} onClick={handleCloseFormsMenu}>
-                      <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                      >
                         {link.name}
                       </a>
                     </MenuItem>
                   ))}
-                </div>
+                </Box>
               ))}
             </Menu>
 
             {/* Contact Us Button */}
             <Button
               color="inherit"
-              sx={{ mx: 1, border: "1px solid black", color: "black", fontSize: { xs: "12px", sm: "14px" } }}
+              sx={{
+                mx: 1,
+                border: "1px solid black",
+                color: "black",
+                fontSize: { xs: "12px", sm: "14px" },
+                whiteSpace: 'nowrap'
+              }}
               onClick={handleOpenContact}
             >
               Nous joindre
@@ -142,16 +171,27 @@ function ResponsiveAppBar() {
         onClose={handleCloseContact}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
-        sx={{ maxWidth: '90vw', overflow: 'auto' }}
+        PaperProps={{
+          sx: {
+            maxWidth: '90vw',
+            // Restrict horizontal overflow:
+            overflowX: 'hidden',
+          },
+        }}
       >
-        <Box sx={{ p: 2, minWidth: 250, textAlign: "center" }}>
-          <Typography variant="h6" gutterBottom>Contact Information</Typography>
-          <Typography variant="body1">📍 Team, Effitaxes 6955 Boulv. Taschereau, Brossard #004, Québec, J4Z 1A7</Typography>
-          <Typography variant="body1">📞 Phone: +1 (450) 259-1829</Typography>
-          <Typography variant="body1">📧 Email: youssef@effitaxes.com</Typography>
+        <Box sx={{ p: 2, textAlign: "center" }}>
+          <Typography variant="h6" gutterBottom>Coordonnées</Typography>
+          <Typography variant="body1">
+            📍 6955 Boulv. Taschereau, Brossard #004, Québec, J4Z 1A7
+          </Typography>
+          <Typography variant="body1">
+            📞 Téléphone: +1 (450) 259-1829
+          </Typography>
+          <Typography variant="body1">
+            📧 eMail: youssef@effitaxes.com
+          </Typography>
         </Box>
       </Popover>
-
     </AppBar>
   );
 }
