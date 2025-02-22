@@ -98,7 +98,7 @@ export default function Home() {
 
           <Paper elevation={10} style={{ padding: "40px", backgroundColor: "rgba(255, 255, 255, 0.9)", borderRadius: "10px" }}>
             <Typography variant="h4" gutterBottom style={{ color: "#002147" }}>
-              Book an Appointment
+              Prendre rendez-vous
             </Typography>
             <Grid container spacing={2} justifyContent="center">
               <Grid item xs={12} sm={6}>
