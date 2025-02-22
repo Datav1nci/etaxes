@@ -104,7 +104,7 @@ function ResponsiveAppBar() {
               sx={{ mx: 1, border: "1px solid black", color: "black", fontSize: { xs: "12px", sm: "14px" } }}
               onClick={handleOpenContact}
             >
-              Nous oindre
+              Nous joindre
             </Button>
           </Box>
 
