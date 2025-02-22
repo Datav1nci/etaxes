@@ -109,7 +109,7 @@ export default function Home() {
               </Grid>
               <Grid item xs={12} sm={3}>
                 <FormControl fullWidth>
-                  <InputLabel>Time Slot</InputLabel>
+                  <InputLabel>Plage horaire</InputLabel>
                   <Select
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
@@ -124,7 +124,7 @@ export default function Home() {
               </Grid>
             </Grid>
             <Button variant="contained" color="primary" fullWidth onClick={bookAppointment} style={{ marginTop: "20px" }}>
-              Book Now
+              Réservez maintenant
             </Button>
            
           </Paper>
