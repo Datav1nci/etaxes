@@ -137,7 +137,7 @@ function ResponsiveAppBar() {
             </Button>
           </Box>
 
-          /*{*//* User Profile Icon *//*}*/
+          {/* User Profile Icon */}
           /*<Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
