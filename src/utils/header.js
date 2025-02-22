@@ -15,7 +15,7 @@ import Popover from '@mui/material/Popover';
 import LogoJPEG from '../../src/assets/Logo.jpg';
 
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = /*['Profile', 'Account', 'Dashboard', 'Logout']*/[''];
 
 // Links for Forms & Resources
 const formLinks = {
