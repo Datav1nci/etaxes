@@ -74,7 +74,7 @@ function ResponsiveAppBar() {
               sx={{ mx: 1, border: "1px solid black", color: "black", fontSize: { xs: "12px", sm: "14px" } }}
               onClick={handleOpenFormsMenu}
             >
-              Forms & Resources
+              Formulaires
             </Button>
             <Menu
               anchorEl={anchorElForms}
