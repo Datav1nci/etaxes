@@ -102,7 +102,7 @@ export default function Home() {
             </Typography>
             <Grid container spacing={2} justifyContent="center">
               <Grid item xs={12} sm={6}>
-                <TextField fullWidth label="Name" value={name} onChange={(e) => setName(e.target.value)} variant="outlined" />
+                <TextField fullWidth label="Nom et prénom" value={name} onChange={(e) => setName(e.target.value)} variant="outlined" />
               </Grid>
               <Grid item xs={12} sm={3}>
                 <TextField fullWidth type="date" value={date} onChange={(e) => setDate(e.target.value)} variant="outlined" />
