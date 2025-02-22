@@ -62,7 +62,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ flexWrap: 'wrap' }}>
           {/* Logo */}
-          <img src={LogoJPEG} alt="Logo" width={250} height={40} />
+          <img src={LogoJPEG} alt="Logo" width={400} height={40} />
 
           {/* Navigation Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: 2 }}></Box>
