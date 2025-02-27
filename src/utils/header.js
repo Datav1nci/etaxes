@@ -24,7 +24,7 @@ const formLinks = {
     { name: "Télétravail", url: "https://forms.office.com/r/9UZKxqL6QD" }, 
     { name: "Travailleur autonome", url: "https://forms.office.com/r/aJyVzUTWKn" },
     { name: "Dépenses Voitures", url: "https://forms.office.com/r/5E4QCZh6Q5" },
-	{ name: "Revenus et dépenses de location d'un bien immeuble", url: "https://forms.office.com/r/4CMKH8ikZX" },
+	{ name: "Revenus et dépenses de location d'immeuble", url: "https://forms.office.com/r/4CMKH8ikZX" },
   ],
   "English Forms": [
     { name: "Individual", url: "https://forms.office.com/r/4LZZ97Fm3J" },
